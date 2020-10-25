@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block content %}
+<main id="main">
+  <h3>Popular Movies</h3>
+
+  <table style="width:100%">
+    <tr>
+      <th>Split</th>
+      <th>Suicide Squad</th>
+      <th>Interstellar</th>
+    </tr>
+    <tr>
+      <td>Directed by M. Night Shyamalan</td>
+      <td>Directed by David Ayer</td>
+      <td>Directed by Christopher Nolan</td>
+    </tr>
+    <tr>
+      <td><img src="{{ url_for('static', filename='interstellar.jpg') }}" class="kk" style="width:400px;height:650px;"></td>
+      <td><img src="{{ url_for('static', filename='suicide.jpg') }}" class="kk" style="width:400px;height:650px;"></td>
+      <td><img src="{{ url_for('static', filename='split_.jpg') }}" class="kk" style="width:400px;height:650px;"></td>
+    </tr>
+  </table>
+</main>
+{% endblock %}
