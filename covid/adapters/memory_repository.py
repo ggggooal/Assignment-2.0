@@ -177,11 +177,7 @@ def load_articles_and_tags(data_path: str, repo: MemoryRepository):
         article_tags = data_row[-number_of_tags:]
 
         # Add any new tags; associate the current article with tags.
-        for tag in article_tags:
-            if tag not in tags.keys():
-                tags[tag] = list()
-            tags[tag].append(article_key)
-        del data_row[-number_of_tags:]
+        
 
         # Create Article object.
         article = Article(
