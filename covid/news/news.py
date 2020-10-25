@@ -62,8 +62,8 @@ def articles_by_date():
 
         # There are articles on a subsequent date, so generate URLs for the 'next' and 'last' navigation buttons.
         if next_date is not None:
-            next_article_url = url_for('news_bp.articles_by_date', date=next_date.isoformat())
-            last_article_url = url_for('news_bp.articles_by_date', date=last_article['date'].isoformat())
+            next_article_url = url_for('news_bp.articles_by_date', date=next_date)
+            last_article_url = url_for('news_bp.articles_by_date', date=last_article['date'])
 
         # Construct urls for viewing article comments and adding comments.
         for article in articles:
@@ -74,7 +74,7 @@ def articles_by_date():
         return render_template(
             'news/articles.html',
             title='Articles',
-            articles_title=target_date.strftime('%A %B %e %Y'),
+            articles_title=target_date,
             articles=articles,
             selected_articles=utilities.get_selected_articles(len(articles) * 2),
             tag_urls=utilities.get_tags_and_urls(),
