@@ -1,0 +1,2 @@
+Assignment 2   Peter Hazard phaz277
+i used the covid structure of the application to get the website up and running, i have left the same original README.md file as the set up is exactly the same.
