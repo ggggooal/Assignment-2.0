@@ -170,7 +170,7 @@ def read_csv_file(filename: str):
 def load_articles_and_tags(data_path: str, repo: MemoryRepository):
     tags = dict()
 
-    for data_row in read_csv_file(os.path.join(data_path, 'news_articles.csv')):
+    for data_row in read_csv_file(os.path.join(data_path, 'Data1000Movies.csv')):
 
         article_key = int(data_row[0])
         number_of_tags = len(data_row) - 6
